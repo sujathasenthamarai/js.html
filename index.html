@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            margin: auto;
+            width: 200px;
+            display: flex;
+        }
+    </style>
+ </head>
+<body>
+    
+    <div class="container">
+        <button id="btn">click me to change background</button>
+
+    </div>
+    <div class="function">
+        <h1 style="color: rgb(194, 19, 127); text-align: center;"><u>Student Info,Percentage and Grade</u></h1>
+        <table>
+            <tr>
+                <td> Student Id </td> <td><input type="number" placeholder="ID" id="id"> </td>
+            </tr>
+            <tr>
+            <td> Student Name</td> <td> <input type="text2" placeholder="Name" id="Name"> </td>
+        </tr>
+        <tr>
+            <td> Student Address</td> <td><input type="text2" placeholder="Address" id="Add"></td>
+        </tr>
+        <tr>
+            <td>English</td> <td><input type="number" placeholder="Score" id="eng"> </td>
+        </tr>
+        <tr>
+            <td>Tamil</td> <td><input type="number" placeholder="Score" id="tam"> </td>
+        </tr>
+        <tr>
+            <td>Hindi</td> <td><input type="number" placeholder="Score" id="hin"> </td>
+        </tr>
+        <tr>
+            <td>Physics</td>  <td><input type="number" placeholder="Score" id="phys"> </td>
+        </tr>
+        <tr>
+            <td>science</td>   <td><input type="number" placeholder="Score" id="sci"> </td>
+        </tr>
+    </table>
+        <button type="button2" onclick="add()">Submit</button>
+      <h2 id="total"></h2>
+      <h2 id="perc"></h2>
+    </div>
+    <script>
+        function changecolor()
+        {
+            var text= document.getElementById("color").value;
+            document.getElementById("body").style.backgroundColor=text;
+        }
+        function colorchange1()
+        {
+            document.getElementById("color").value=document.getElementById("color1").value
+            var text= document.getElementById("color").value;
+            document.getElementById("body").style.backgroundColor=text;
+        }
+        function add()
+        {
+           var mark1=document.getElementById('eng').value;
+           var mark2=document.getElementById('tam').value;
+           var mark3=document.getElementById('hin').value;
+           var mark4=document.getElementById('phys').value;
+           var mark5=document.getElementById('sci').value;
+           var total=parseInt(mark1)+parseInt(mark2)+parseInt(mark3)+parseInt(mark4)+parseInt(mark5);
+           var percentage = (total/500)*100;
+            document.getElementById("total").innerHTML="Out of 500 your total marks is=" +  total;
+            document.getElementById("perc").innerHTML="Percentage is =" + percentage + "%";
+         }
+    </script>
+</body>
+</html>
+    <script src="script.js"></script>
+</body>
+</html>
